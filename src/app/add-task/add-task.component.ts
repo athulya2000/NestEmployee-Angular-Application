@@ -20,6 +20,9 @@ readValues=()=>{
       console.log(response)
       if(response.status=="success"){
         alert("Task added successfully")
+        this.empname=""
+        this.task=""
+
       }else{
         alert("something went wrong")
       }

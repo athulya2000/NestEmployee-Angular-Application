@@ -27,6 +27,14 @@ readValues=()=>{
       console.log(response)
       if(response.status=="success"){
         alert("Employee added successfully")
+         this.empcode=""
+         this.empname=""
+         this.designation=""
+         this.salary=""
+         this.phoneno=""
+         this.emailid=""
+         this.password=""
+         this.companywebsite=""
       }
       else{
         alert("something went wrong")
