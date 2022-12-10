@@ -8,6 +8,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
+import { AddTaskComponent } from './add-task/add-task.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -16,6 +17,10 @@ const myRoute:Routes=[
   {
     path:"add",
     component:AddEmployeeComponent
+  },
+  {
+    path:"addtask",
+    component:AddTaskComponent
   }
 ]
 
@@ -23,7 +28,8 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
