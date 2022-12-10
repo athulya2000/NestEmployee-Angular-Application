@@ -14,6 +14,9 @@ export class ApiService {
   addTask=(add:any)=>{
     return this.http.post("http://localhost:8080/addtask",add)
   }
+  employeeLogin=(login:any)=>{
+    return this.http.post("http://localhost:8080/employeelogin",login)
+  }
 
     
   
