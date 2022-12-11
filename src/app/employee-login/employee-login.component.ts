@@ -15,7 +15,7 @@ export class EmployeeLoginComponent {
   constructor(private api:ApiService,private route:Router){}
 
   readValues=()=>{
-    let data:any={"emailid":this.emailid,"password":this.emailid}
+    let data:any={"emailid":this.emailid,"password":this.password}
     console.log(data)
     this.api.employeeLogin(data).subscribe(
       (response:any)=>{
@@ -25,8 +25,8 @@ export class EmployeeLoginComponent {
         this.password=""
         let employeeId=response.employeeId
         console.log(employeeId)
-        localStorage.setItem("employeeId",employeeId)
-        this.route.navigate(['/'])
+        localStorage.setItem("employeeInfo",employeeId)
+        this.route.navigate(['/viewtask'])
       }
     )
     
