@@ -10,6 +10,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { Navbar3Component } from './navbar3/navbar3.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -22,6 +26,14 @@ const myRoute:Routes=[
   {
     path:"addtask",
     component:AddTaskComponent
+  },
+  {
+    path:"login",
+    component:EmployeeLoginComponent
+  },
+  {
+    path:"viewtask",
+    component:ViewTaskComponent
   }
 ]
 
@@ -31,7 +43,11 @@ const myRoute:Routes=[
     AdminLoginComponent,
     AddEmployeeComponent,
     AddTaskComponent,
-    EmployeeLoginComponent
+    EmployeeLoginComponent,
+    ViewTaskComponent,
+    NavbarComponent,
+    Navbar2Component,
+    Navbar3Component
   ],
   imports: [
     BrowserModule,

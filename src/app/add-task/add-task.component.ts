@@ -13,8 +13,11 @@ task=""
 constructor(private api:ApiService){}
 
 readValues=()=>{
-  let data:any={"empname":this.empname,"task":this.task}
-  console.log(data)
+  let data:any={
+    "employeeId":localStorage.getItem("employeeInfo"),
+    "task":this.task,
+    "empname":this.empname}
+  
   this.api.addTask(data).subscribe(
     (response:any)=>{
       console.log(response)
